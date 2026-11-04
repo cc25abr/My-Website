@@ -1,0 +1,105 @@
+/* General page styling */
+
+body {
+	margin: 0;
+	font-family : Arial,sans-serif;
+	background-color : #101820;
+	color : white;
+}
+
+/* Navigation*/
+
+header{
+	background-color : #1c2936;
+	padding : 20px;
+	text-align: center;
+	
+}
+
+nav a{
+	
+	color : white;
+	text-decoration : none;
+	margin : 10px;
+	display : inline-block;
+}
+
+nav a : hover {
+	color : #00bfff;
+	
+}
+
+nav a: focus_visible {
+	outline : 3px solid #00bfff;
+	outline-offset : 4px;
+}
+
+/*Homepage*/
+
+.home h1{
+	font-size: 36px;
+	margin-bottom: 40px;
+}
+
+/*Animated photograph*/
+
+.animated-photo {
+	display : block;
+	width: 350px;
+	height : 500px;
+	max-width : 100%;
+	object-fit: cover:
+	border-radius : 50%;
+	margin : 0 auto;
+	
+	animation-name: growPhoto;
+	animation-duration: 10s;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
+}
+
+/* Animation */
+
+@keyframes growPhoto {
+	0%{
+		transform : scale (0.1);
+		opacity : 0;
+	}
+	100%{
+		transform : scale (1);
+		opacity : 1;
+	}
+	
+}
+
+/* Other pages */
+
+main : not(.home){
+	max-width : 900px;
+	margin : auto;
+	padding : 40px 20px;
+}
+
+section {
+	margin-bottom : 40px;
+}
+
+section p {
+	line-height : 1.7;
+}
+
+/*Footer */
+
+footer {
+	text-align : center;
+	padding : 20px;
+}
+
+
+/* Acessability : reduced motion */
+
+@media (prefers-reduced-motion : reduce) {
+	.animated-photo {
+		animation: none;
+	}
+}
